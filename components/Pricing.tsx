@@ -5,9 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useLang } from "@/lib/LangContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-
-function CheckIcon({ gold }: { gold?: boolean }) {
+function CheckIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
       <circle cx="8" cy="8" r="7" stroke="#C8973A" strokeWidth="1.2" />
@@ -99,7 +97,7 @@ export default function Pricing() {
                 <ul className="space-y-3 mb-10 flex-1">
                   {full.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckIcon gold />
+                      <CheckIcon />
                       <span className="font-inter text-[#CCCCCC] text-sm font-light">{item}</span>
                     </li>
                   ))}
