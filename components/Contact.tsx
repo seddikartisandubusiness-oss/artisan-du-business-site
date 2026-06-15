@@ -12,21 +12,29 @@ export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setError(false);
     const form = e.currentTarget;
     const data = new FormData(form);
     try {
-      /* TODO: Remplacer FORMSPREE_ID_A_REMPLACER par votre vrai ID Formspree */
-      const res = await fetch("https://formspree.io/f/FORMSPREE_ID_A_REMPLACER", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
       });
-      if (res.ok) setSubmitted(true);
+      const json = await res.json();
+      if (res.ok && json.success) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -75,6 +83,15 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
+              <input type="hidden" name="access_key" value="fd4f70ba-a205-4405-a743-11bbb54c2463" />
+              <input type="hidden" name="subject" value="Nouveau message - Artisan du Business" />
+              {error && (
+                <p className="font-inter text-sm text-red-400 text-center">
+                  {lang === "fr"
+                    ? "Une erreur s'est produite. Écrivez-nous à contact@artisandubusiness.com"
+                    : "An error occurred. Email us at contact@artisandubusiness.com"}
+                </p>
+              )}
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-[#AAAAAA] font-inter text-sm">
                   {t.contact.fields.name}
