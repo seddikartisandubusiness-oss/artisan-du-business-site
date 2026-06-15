@@ -28,7 +28,7 @@ export default function Navbar() {
       }}
       transition={{ duration: 0.3 }}
     >
-      <span className="font-syne font-bold text-lg tracking-tight text-gold">
+      <span className="font-inter font-bold text-lg tracking-tight text-gold">
         Artisan du Business
       </span>
 

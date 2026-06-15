@@ -42,8 +42,8 @@ export default function Contact() {
           className="text-center mb-12"
         >
           <h2
-            className="font-syne font-bold text-white mb-4"
-            style={{ fontSize: "clamp(24px, 4vw, 40px)" }}
+            className="font-inter font-semibold text-white mb-4"
+            style={{ fontSize: "32px" }}
           >
             {t.contact.title}
           </h2>
@@ -66,7 +66,7 @@ export default function Contact() {
                   <path d="M5 12L9 16L19 8" stroke="#3E9B5C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <p className="font-syne font-bold text-white text-lg mb-2">
+              <p className="font-inter font-semibold text-white text-lg mb-2">
                 {lang === "fr" ? "Message envoyé !" : "Message sent!"}
               </p>
               <p className="font-inter text-text-muted text-sm">

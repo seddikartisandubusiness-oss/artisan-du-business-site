@@ -28,8 +28,8 @@ export default function Pricing() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="font-syne font-bold text-dark text-center mb-16"
-          style={{ fontSize: "clamp(24px, 4vw, 40px)" }}
+          className="font-inter font-semibold text-dark text-center mb-16"
+          style={{ fontSize: "32px" }}
         >
           {t.pricing.title}
         </motion.h2>
@@ -49,7 +49,7 @@ export default function Pricing() {
                   {free.tag}
                 </Badge>
                 <div className="mb-1">
-                  <span className="font-syne font-bold text-dark" style={{ fontSize: "clamp(36px, 5vw, 48px)" }}>
+                  <span className="font-inter font-bold text-dark" style={{ fontSize: "clamp(36px, 5vw, 48px)" }}>
                     {free.price}
                   </span>
                 </div>
@@ -89,7 +89,7 @@ export default function Pricing() {
                   {full.tag}
                 </Badge>
                 <div className="mb-1">
-                  <span className="font-syne font-bold text-gold" style={{ fontSize: "clamp(36px, 5vw, 48px)" }}>
+                  <span className="font-inter font-bold text-gold" style={{ fontSize: "clamp(36px, 5vw, 48px)" }}>
                     {full.price}
                   </span>
                 </div>

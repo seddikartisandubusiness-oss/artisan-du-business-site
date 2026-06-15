@@ -50,8 +50,8 @@ export default function Problems() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="font-syne font-bold text-dark text-center mb-16"
-          style={{ fontSize: "clamp(24px, 4vw, 40px)" }}
+          className="font-inter font-semibold text-dark text-center mb-16"
+          style={{ fontSize: "32px" }}
         >
           {t.problems.title}
         </motion.h2>
@@ -71,12 +71,12 @@ export default function Problems() {
                     {icons[card.icon]}
                   </div>
                   <h3
-                    className="font-syne font-bold text-dark mb-3"
+                    className="font-inter font-semibold text-dark mb-3"
                     style={{ fontSize: "clamp(16px, 1.5vw, 18px)" }}
                   >
                     {card.title}
                   </h3>
-                  <p className="font-inter font-light text-text-muted leading-relaxed text-[15px]">
+                  <p className="font-inter font-normal text-text-muted leading-relaxed text-base">
                     {card.body}
                   </p>
                 </CardContent>

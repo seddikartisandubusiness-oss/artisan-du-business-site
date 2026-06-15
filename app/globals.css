@@ -62,10 +62,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.font-syne {
-  font-family: var(--font-syne), "Syne", sans-serif;
-}
-
 .font-inter {
   font-family: var(--font-inter), "Inter", sans-serif;
 }

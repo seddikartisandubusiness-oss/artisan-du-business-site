@@ -58,14 +58,14 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-4xl w-full mx-auto text-center">
         {/* Title */}
-        <motion.div initial="hidden" animate="visible" className="mb-6">
+        <motion.div initial="hidden" animate="visible" className="mb-6 text-left">
           {titleLines.map((line, i) => (
             <motion.h1
               key={i}
               custom={i}
               variants={fadeUp}
-              className="font-syne font-extrabold leading-[1.1] text-white block"
-              style={{ fontSize: "clamp(32px, 6vw, 64px)" }}
+              className="font-inter font-bold leading-[1.1] text-white block"
+              style={{ fontSize: "clamp(28px, 5vw, 56px)" }}
             >
               {line}
             </motion.h1>
@@ -95,7 +95,7 @@ export default function Hero() {
           {/* Score */}
           <div className="text-center mb-6">
             <div
-              className="font-syne font-bold"
+              className="font-inter font-bold"
               style={{ fontSize: "clamp(42px, 8vw, 72px)", color: "#B83232" }}
             >
               <AnimatedCounter from={0} to={31} duration={2} />

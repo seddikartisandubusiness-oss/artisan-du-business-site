@@ -23,8 +23,8 @@ export default function HowItWorks() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="font-syne font-bold text-dark text-center mb-16"
-          style={{ fontSize: "clamp(24px, 4vw, 40px)" }}
+          className="font-inter font-semibold text-dark text-center mb-16"
+          style={{ fontSize: "32px" }}
         >
           {t.how.title}
         </motion.h2>
@@ -41,7 +41,7 @@ export default function HowItWorks() {
                 {/* Left: number + connector */}
                 <div className="flex flex-col items-center flex-shrink-0">
                   <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center font-syne font-bold text-sm z-10"
+                    className="w-10 h-10 rounded-full flex items-center justify-center font-inter font-bold text-sm z-10"
                     style={{ backgroundColor: "#0E0E0E", border: "2px solid #C8973A", color: "#C8973A" }}
                   >
                     {step.num}
@@ -55,7 +55,7 @@ export default function HowItWorks() {
                 <div className="flex-1 pb-2">
                   <div className="flex items-center gap-3 mb-2 flex-wrap">
                     <h3
-                      className="font-syne font-bold text-dark"
+                      className="font-inter font-semibold text-dark"
                       style={{ fontSize: "clamp(16px, 1.8vw, 20px)" }}
                     >
                       {step.title}
@@ -71,7 +71,7 @@ export default function HowItWorks() {
                       {step.badge}
                     </span>
                   </div>
-                  <p className="font-inter font-light text-text-muted leading-relaxed text-[15px]">
+                  <p className="font-inter font-normal text-text-muted leading-relaxed text-base">
                     {step.body}
                   </p>
                 </div>
