@@ -20,7 +20,8 @@ export default function Contact() {
     const form = e.currentTarget;
     const data = new FormData(form);
     try {
-      const res = await fetch("https://formspree.io/f/FORMSPREE_ID", {
+      /* TODO: Remplacer FORMSPREE_ID_A_REMPLACER par votre vrai ID Formspree */
+      const res = await fetch("https://formspree.io/f/FORMSPREE_ID_A_REMPLACER", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },

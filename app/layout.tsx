@@ -5,7 +5,7 @@ import { LangProvider } from "@/lib/LangContext";
 
 const syne = Syne({
   subsets: ["latin"],
-  weight: ["400", "700", "800"],
+  weight: ["700", "800"],
   variable: "--font-syne",
   display: "swap",
 });

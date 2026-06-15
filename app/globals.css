@@ -50,11 +50,6 @@
 
 }
 
-:root {
-  --font-syne: "Syne", sans-serif;
-  --font-inter: "Inter", sans-serif;
-}
-
 html {
   scroll-behavior: smooth;
 }
